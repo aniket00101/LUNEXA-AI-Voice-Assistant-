@@ -4,7 +4,7 @@ const geminiResponse = async (command, assistantName, userName) => {
   try {
     const apiUrl = process.env.GEMINI_API_URL;
 
-    const prompt = `You are a virtual assistant named ${assistantName}, created by ${userName}.
+    const prompt = `You are a virtual assistant named siri, created by ${userName}.
 You are not Google. You will now behave like a voice-enabled assistant.
 
 Your task is to understand the user's natural language input and respond ONLY with a valid JSON object like this:
@@ -35,7 +35,7 @@ Type meanings:
 - "get_month": user asks for the current month.
 
 Important:
-- If someone asks "Who created you?", respond with: "${userName}".
+- If someone asks "Who created you?", respond with: I was created by Aniket.
 - Only return the JSON object. Do not include any extra text.
 
 Now, your user input: ${command}

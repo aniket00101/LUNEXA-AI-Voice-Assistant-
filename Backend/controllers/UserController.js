@@ -44,6 +44,9 @@ export const askToAssistant = async (req, res) => {
     const { command } = req.body;
     const user = await User.findById(req.userId);
 
+    user.history.push(command)
+    user.save()
+
     if (!user) {
       return res.status(404).json({ response: "User not found" });
     }
@@ -109,6 +112,7 @@ export const askToAssistant = async (req, res) => {
           .status(400)
           .json({ response: "I didn't understand that command." });
     }
+    
   } catch (error) {
     console.error(error);
     return res.status(500).json({ response: "ask assistant error" });
