@@ -38,11 +38,9 @@ app.get("/", async (req, res) => {
     }
 })
 
-if(process.env.NODE_ENV !== "production"){
-    app.listen(port, () => {
-        connectDb()
-        console.log(`Server started at port ${port}`)
-    })
-}
 
-export default app;
+app.listen(port, () => {
+    connectDb()
+    console.log(`Server started at port ${port}`)
+})
+
