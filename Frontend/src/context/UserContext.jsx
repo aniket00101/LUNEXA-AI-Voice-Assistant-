@@ -3,7 +3,7 @@ import axios from "axios"
 export const userDataContext = createContext()
 
 const UserContext = ({children}) => {
-    const serverUrl = "https://lunexa-ai-voice-assistant-backend.onrender.com"
+    const serverUrl = "http://localhost:8000"
     const [userData, setUserData] = useState(null)
     const [frontendImage, setFrontendImage] = useState(null)
     const [backendImage, setBackendImage] = useState(null)
