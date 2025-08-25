@@ -1,6 +1,5 @@
 import User from "../models/user.model.js"
 import uploadOnCloudinary from "../config/cloudinary.js"
-import { lengthSq } from "three/src/nodes/TSL.js"
 import geminiResponse from "../gemini.js"
 import moment from "moment"
 import { response } from "express"
